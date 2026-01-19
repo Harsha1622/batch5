@@ -1,0 +1,264 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SmartLearn – Online Learning</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background:#f5f7fb;
+  color:#1f2937;
+}
+
+/* ================= HEADER ================= */
+header{
+  background:white;
+  padding:10px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 4px 8px rgba(0,0,0,0.08);
+}
+
+header h2{
+  color:#2563eb;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+}
+
+nav a{
+  margin-left:25px;
+  text-decoration:none;
+  color:#374151;
+  font-weight:500;
+}
+
+nav a:hover{
+  color:#2563eb;
+}
+
+/* ===== STUDENT PROFILE ===== */
+.profile{
+  display:flex;
+  align-items:center;
+  margin-left:25px;
+  position:relative;
+  cursor:pointer;
+}
+
+.profile img{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  margin-right:8px;
+}
+
+.profile span{
+  font-weight:500;
+}
+
+/* DROPDOWN */
+.profile-menu{
+  position:absolute;
+  top:45px;
+  right:0;
+  background:white;
+  border-radius:8px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  width:170px;
+  display:none;
+  flex-direction:column;
+  overflow:hidden;
+  z-index:10;
+}
+
+.profile-menu a{
+  padding:12px 15px;
+  text-decoration:none;
+  color:#374151;
+  font-size:14px;
+}
+
+.profile-menu a:hover{
+  background:#f3f4f6;
+}
+
+/* SHOW DROPDOWN */
+.profile:hover .profile-menu{
+  display:flex;
+}
+
+/* ================= HERO ================= */
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px 70px;
+  gap:60px;
+}
+
+/* LEFT */
+.hero-text{
+  max-width:520px;
+}
+
+.hero-text h2{
+  font-size:40px;
+  line-height:1.2;
+  margin-bottom:20px;
+}
+
+.hero-text p{
+  font-size:16px;
+  color:#6b7280;
+  margin-bottom:30px;
+}
+
+.hero-text button{
+  padding:14px 32px;
+  background:#2563eb;
+  color:white;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.hero-text button:hover{
+  background:#1e40af;
+}
+
+/* RIGHT LOGIN CARD */
+.login-card{
+  background:white;
+  padding:35px;
+  width:380px;
+  border-radius:14px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+.login-card h3{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.login-card input{
+  width:100%;
+  padding:14px;
+  margin-bottom:18px;
+  border-radius:8px;
+  border:1px solid #d1d5db;
+  font-size:15px;
+}
+
+.login-card button{
+  width:100%;
+  padding:14px;
+  background:#2563eb;
+  color:white;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.login-card button:hover{
+  background:#1e40af;
+}
+
+.login-card p{
+  text-align:center;
+  font-size:14px;
+  margin-top:18px;
+}
+
+.login-card a{
+  text-decoration:none;
+  color:#2563eb;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+  header{
+    padding:18px 30px;
+  }
+
+  .hero{
+    flex-direction:column;
+    padding:50px 30px;
+  }
+
+  .hero-text{
+    text-align:center;
+  }
+
+  .hero-text h2{
+    font-size:32px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <h2>SmartLearn</h2>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="course.html">Courses</a>
+
+    <!-- STUDENT PROFILE -->
+    <div class="profile">
+      <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Student">
+     
+
+      <div class="profile-menu">
+        <a href="profile.html">My Profile</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+
+  <!-- LEFT -->
+  <div class="hero-text">
+    <h2>Build Skills with Smart Learning</h2>
+    <p>
+      Learn job-ready skills through structured courses,
+      quizzes, and progress tracking designed for students.
+    </p> <a href="course.html">
+    <button>Start Learning </button></a>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="login-card">
+    <h3>Student Login</h3>
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button>Login</button>
+    <p>New here? <a href="signup.html">Create an account</a></p>
+  </div>
+
+</section>
+
+</body>
+</html>
