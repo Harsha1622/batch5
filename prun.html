@@ -1,0 +1,268 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SmartLearn | Process of Running Python Script</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background:#f3f6fb;
+  color:#1f2937;
+}
+
+/* ================= HEADER ================= */
+header{
+  background:white;
+  padding:18px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 5px 14px rgba(0,0,0,0.08);
+}
+
+header h2{
+  color:#2563eb;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  align-items:center;
+  gap:5px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#374151;
+  font-weight:500;
+}
+
+/* ===== STUDENT PROFILE ===== */
+.profile{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  position:relative;
+  cursor:pointer;
+}
+
+.profile img{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+}
+
+.profile span{
+  font-weight:500;
+}
+
+/* DROPDOWN */
+.profile-menu{
+  position:absolute;
+  top:45px;
+  right:0;
+  background:white;
+  border-radius:8px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  width:170px;
+  display:none;
+  flex-direction:column;
+  overflow:hidden;
+  z-index:10;
+}
+
+.profile-menu a{
+  padding:12px 15px;
+  text-decoration:none;
+  color:#374151;
+  font-size:14px;
+}
+
+.profile-menu a:hover{
+  background:#f3f4f6;
+}
+
+/* SHOW DROPDOWN */
+.profile:hover .profile-menu{
+  display:flex;
+}
+
+/* ================= CONTENT ================= */
+.container{
+  max-width:900px;
+  margin:50px auto;
+  background:white;
+  padding:35px;
+  border-radius:14px;
+  box-shadow:0 18px 35px rgba(0,0,0,0.12);
+}
+
+.container h3{
+  margin-bottom:15px;
+  font-size:26px;
+}
+
+.section{
+  margin-top:25px;
+}
+
+.section h4{
+  margin-bottom:10px;
+  font-size:18px;
+  color:#2563eb;
+}
+
+.section p{
+  line-height:1.7;
+  font-size:15px;
+}
+
+/* CODE BOX */
+pre{
+  background:#111827;
+  color:#e5e7eb;
+  padding:20px;
+  border-radius:10px;
+  overflow-x:auto;
+  margin-top:10px;
+}
+
+code{
+  font-family:Consolas, monospace;
+  font-size:14px;
+}
+
+/* OUTPUT BOX */
+.output{
+  background:#f9fafb;
+  border:1px solid #d1d5db;
+  padding:15px;
+  border-radius:8px;
+  margin-top:10px;
+  font-family:Consolas, monospace;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <h2>SmartLearn</h2>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="course.html">Courses</a>
+
+    <div class="profile">
+      <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Student">
+      <span>Student</span>
+
+      <div class="profile-menu">
+        <a href="profile.html">My Profile</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ================= MAIN CONTENT ================= -->
+<div class="container">
+
+  <h3>Process of Running a Python Script</h3>
+
+  <div class="section">
+    <h4>What is a Python Script?</h4>
+    <p>
+      A Python script is a file containing Python statements and instructions.
+      Python scripts are saved using the <strong>.py</strong> extension and
+      executed by the Python interpreter.
+    </p>
+  </div>
+
+  <div class="section">
+    <h4>Steps to Run a Python Script</h4>
+    <p>
+      The process of running a Python script involves writing the code,
+      saving it, and executing it using the Python interpreter.
+    </p>
+  </div>
+
+  <div class="section">
+    <h4>Step 1: Write the Python Program</h4>
+    <p>
+      First, write the Python program using an editor such as IDLE,
+      Visual Studio Code, or any text editor.
+    </p>
+
+    <pre><code>
+print("Python script executed successfully")
+    </code></pre>
+  </div>
+
+  <div class="section">
+    <h4>Step 2: Save the File</h4>
+    <p>
+      Save the program with a <strong>.py</strong> extension.
+      Example: <strong>script.py</strong>
+    </p>
+  </div>
+
+  <div class="section">
+    <h4>Step 3: Run the Script</h4>
+    <p>
+      The Python interpreter reads the script line by line,
+      converts it into bytecode, and executes it.
+    </p>
+
+    <pre><code>
+python script.py
+    </code></pre>
+  </div>
+
+  <div class="section">
+    <h4>Step 4: Output Display</h4>
+    <p>
+      After successful execution, the output is displayed on the screen.
+    </p>
+
+    <div class="output">
+      Python script executed successfully
+    </div>
+  </div>
+
+  <div class="section">
+    <h4>Behind the Execution Process</h4>
+    <p>
+      ✔ The Python interpreter checks syntax.<br>
+      ✔ Converts source code into bytecode.<br>
+      ✔ Executes bytecode using the Python Virtual Machine (PVM).<br>
+      ✔ Displays output or error messages.
+    </p>
+  </div>
+
+  <div class="section">
+    <h4>Advantages of Running Python Scripts</h4>
+    <p>
+      ✔ Easy to execute and debug.<br>
+      ✔ No compilation required.<br>
+      ✔ Platform independent.<br>
+      ✔ Suitable for automation and scripting tasks.
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>

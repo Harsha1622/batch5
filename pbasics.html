@@ -1,0 +1,282 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SmartLearn | Python IDLE & Program Editor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background:#f3f6fb;
+  color:#1f2937;
+}
+
+/* HEADER */
+header{
+  background:white;
+  padding:18px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 5px 14px rgba(0,0,0,0.08);
+}
+
+header h2{
+  color:#2563eb;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  gap:5px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#374151;
+  font-weight:500;
+}
+
+/* PROFILE */
+.profile{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  position:relative;
+  cursor:pointer;
+}
+
+.profile img{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+}
+
+.profile-menu{
+  position:absolute;
+  top:45px;
+  right:0;
+  background:white;
+  border-radius:8px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  width:170px;
+  display:none;
+  flex-direction:column;
+}
+
+.profile-menu a{
+  padding:12px 15px;
+  text-decoration:none;
+  color:#374151;
+  font-size:14px;
+}
+
+.profile:hover .profile-menu{
+  display:flex;
+}
+
+/* CONTENT */
+.container{
+  max-width:900px;
+  margin:50px auto;
+  background:white;
+  padding:35px;
+  border-radius:14px;
+  box-shadow:0 18px 35px rgba(0,0,0,0.12);
+}
+
+.container h3{
+  margin-bottom:15px;
+  font-size:26px;
+}
+
+.section{
+  margin-top:25px;
+}
+
+.section h4{
+  margin-bottom:10px;
+  font-size:18px;
+  color:#2563eb;
+}
+
+.section p{
+  line-height:1.7;
+  font-size:15px;
+}
+
+/* CODE */
+pre{
+  background:#111827;
+  color:#e5e7eb;
+  padding:20px;
+  border-radius:10px;
+  margin-top:10px;
+}
+
+.output{
+  background:#f9fafb;
+  border:1px solid #d1d5db;
+  padding:15px;
+  border-radius:8px;
+  margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>SmartLearn</h2>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="course.html">Courses</a>
+
+    <div class="profile">
+      <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png">
+      <span>Student</span>
+
+      <div class="profile-menu">
+        <a href="#">My Profile</a>
+        <a href="#">Dashboard</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="container">
+
+<h3>Python Basics</h3>
+
+<!-- IDENTIFIERS -->
+<div class="section">
+<h4>Identifiers</h4>
+<p>
+Identifiers are names used to identify variables, functions, classes,
+modules, and objects in Python.
+</p>
+
+<pre><code>
+total_score = 85
+user_name = "admin"
+calculate_total()
+</code></pre>
+
+<p><strong>Rules for Identifiers:</strong><br>
+✔ Can contain letters, digits, and underscore (_).<br>
+✔ Must start with a letter or underscore.<br>
+✔ Cannot start with a digit.<br>
+✔ Special symbols are not allowed except underscore.<br>
+✔ Keywords cannot be used as identifiers.
+</p>
+
+<pre><code>
+2total        # ❌ Invalid
+total_2       # ✅ Valid
+total@value   # ❌ Invalid
+</code></pre>
+</div>
+
+<!-- KEYWORDS -->
+<div class="section">
+<h4>Keywords</h4>
+<p>
+Keywords are reserved words in Python that have predefined meanings.
+They cannot be used as variable names or function names.
+</p>
+
+<p>
+All keywords are written in lowercase except
+<strong>True</strong>, <strong>False</strong>, and <strong>None</strong>.
+</p>
+
+<pre><code>
+if user_logged_in:
+    print("Access granted")
+</code></pre>
+</div>
+
+<!-- VARIABLES -->
+<div class="section">
+<h4>Variables</h4>
+<p>
+Variables are used to store data values.
+Python does not require explicit variable declaration.
+The data type is automatically determined by the value.
+</p>
+
+<pre><code>
+user_id = 1024
+username = "developer"
+account_balance = 2500.75
+</code></pre>
+
+<p><strong>Rules for Variables:</strong><br>
+✔ Variables are case-sensitive.<br>
+✔ Must start with a letter or underscore.<br>
+✔ Cannot start with a number.<br>
+✔ Special characters are not allowed except underscore.<br>
+✔ No limit on variable name length.
+</p>
+
+<pre><code>
+status = "active"
+print(status)   # ✅ Correct
+print(Status)   # ❌ Error
+</code></pre>
+</div>
+
+<!-- INDENTATION -->
+<div class="section">
+<h4>Indentation</h4>
+<p>
+Indentation refers to spaces at the beginning of a line.
+Python uses indentation instead of curly braces to define code blocks.
+By default, Python uses <strong>4 spaces</strong>.
+</p>
+
+<pre><code>
+if account_balance > 0:
+    print("Transaction allowed")
+    print("Processing payment")
+</code></pre>
+</div>
+
+<!-- COMMENTS -->
+<div class="section">
+<h4>Comments</h4>
+<p>
+Comments are used to explain code logic.
+They improve readability and are ignored by the Python interpreter.
+</p>
+
+<p><strong>1. Single-line Comment</strong></p>
+<pre><code>
+# Display welcome message
+print("Welcome to SmartLearn")
+</code></pre>
+
+<p><strong>2. Multi-line Comment</strong></p>
+<pre><code>
+'''
+This program checks user access
+and displays a message accordingly
+'''
+print("Access granted")
+</code></pre>
+
+</div>
+
+</div>
+
+</body>
+</html>
